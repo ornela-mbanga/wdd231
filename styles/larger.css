@@ -1,0 +1,225 @@
+@media screen and (min-width: 768px) {
+
+    header {
+        padding: 1rem 2rem;
+
+        min-height: 90px;
+    }
+
+    header img {
+        width: 65px;
+        height: 65px;
+    }
+
+    header span {
+        font-size: 1.5rem;
+
+        margin-left: 1rem;
+    }
+
+
+
+    #menu-button {
+        display: none;
+    }
+
+
+
+    nav {
+        display: flex;
+
+        flex-direction: row;
+
+        justify-content: flex-end;
+
+        align-items: center;
+
+        padding: 0 2rem;
+
+    }
+
+    nav a {
+        border-bottom: none;
+
+        padding: 1rem 1.5rem;
+
+        transition:
+            background-color 0.2s ease,
+            color 0.2s ease;
+    }
+
+
+
+    main {
+        max-width: 1100px;
+
+        padding: 2rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+
+        margin-bottom: 1.5rem;
+    }
+
+
+    .about-section {
+
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+    .about-content {
+        background-color: black;
+        color: beige;
+        text-align: center;
+    }
+
+    .about-photo{
+        background-color:black;
+        color: beige;
+        text-align: center;
+    }
+    h2{
+        background-color: #17365d;
+        padding: 10px;
+        margin-top: 0;
+        color: white;
+    }
+
+    h3 {
+        background-color: #17365d;
+        color: beige;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-top: 0;
+        padding: 10px;
+    
+    }
+    .web {
+       padding: 0;
+       
+    }
+
+    }
+
+
+    
+    .about-photo img {
+
+        width: 180px;
+
+        height: auto;
+
+        margin: 0;
+
+        border-radius: 8px;
+    }
+
+    .courses-section {
+
+        padding: 1.5rem;
+    }
+
+    .course-buttons {
+
+        justify-content: center;
+
+        gap: 1rem;
+        
+    }
+
+    .course-buttons button {
+
+        flex: 0 1 180px;
+
+        min-height: 48px;
+        margin: 10px;
+    }
+
+
+
+    #course-container {
+
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.2rem;
+        margin: 10px;
+    }
+
+    .course-card {
+
+        min-height: 130px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        align-items: center;
+    }
+
+    .course-card h3 {
+
+        font-size: 1.2rem;
+    }
+
+
+
+    footer {
+
+        padding: 2rem;
+
+        margin-top: 2rem;
+    }
+
+    .social-links {
+
+        gap: 2rem;
+    }
+
+    .social-links a {
+
+        padding: 0.5rem 1rem;
+    }
+    .social-links img {
+    width: 40px;
+    height: 40px;
+}
+
+
+@media screen and (min-width: 1000px) {
+
+    header {
+
+        padding-left:
+            calc((100% - 1100px) / 2);
+
+        padding-right:
+            calc((100% - 1100px) / 2);
+    }
+
+
+    nav {
+
+        padding-left:
+            calc((100% - 1100px) / 2);
+
+        padding-right:
+            calc((100% - 1100px) / 2);
+    }
+
+
+    main {
+
+        padding-top: 2.5rem;
+
+        padding-bottom: 2.5rem;
+    }
+
+
+    #course-container {
+
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
