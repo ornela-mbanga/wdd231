@@ -1,0 +1,84 @@
+[
+
+    {
+        "name": "ORVY",
+        "address": "29 rue Jacob Binaki, Brazzaville",
+        "phone": "068000001",
+        "website": "https://ornela-mbanga.github.io/wdd131/week06project/",
+        "image": "Orvy.png",
+        "membership": 2,
+        "description": "Beauty and cosmetics business offering beauty, skincare, hair and fashion products."
+    },
+    {
+        "name": "GRACE TECH",
+        "address": "64 rue Château d’Eau, Brazzaville",
+        "phone": "068456310",
+        "website": "#",
+        "image": "Grace-Tech.png",
+        "membership": 3,
+        "description": "Technology and community initiative supporting women and youth through digital skills."
+    },
+    {
+        "name": "Blanche MB",
+        "address": "17 rue Timbamba, Pointe-Noire, Republic of Congo",
+        "phone": "068000002",
+        "website": "#",
+        "image": "blanche-mb.png",
+        "membership": 1,
+        "description": "Local business specializing in manioc products."
+    },
+    {
+        "name": "DIVINE",
+        "address": "03 rue de la Piscine, Brazzaville, Republic of Congo",
+        "phone": "068900303",
+        "website": "#",
+        "image": "divine.png",
+        "membership": 1,
+        "description": "Beauty and personal care business."
+    },
+    {
+        "name": "Mboka Construction",
+        "address": "16 rue Pool, Brazzaville, Republic of Congo",
+        "phone": "068050304",
+        "website": "#",
+        "image": "mboka-construction.png",
+        "membership": 3,
+        "description": "Construction and building services for residential and commercial projects."
+    },
+    {
+        "name": "Congo Digital Services",
+        "address": "15 rue Mbochi, Brazzaville, Republic of Congo",
+        "phone": "068060105",
+        "website": "#",
+        "image": "congo-digital.png",
+        "membership": 2,
+        "description": "Digital and information technology services for individuals and businesses."
+    },
+    {
+        "name": "Africa Business Consulting",
+        "address": "40 rue Mpangala, Brazzaville, Republic of Congo",
+        "phone": "068007046",
+        "website": "#",
+        "image": "africa-business.png",
+        "membership": 2,
+        "description": "Business consulting services supporting entrepreneurs and local organizations."
+    },
+    {
+        "name": "Brazzaville Café",
+        "address": "07 rue de la Nille, Brazzaville, Republic of Congo",
+        "phone": "068020607",
+        "website": "#",
+        "image": "brazzaville-cafe.png",
+        "membership": 1,
+        "description": "Local café offering beverages, snacks and a welcoming community space."
+    },
+    {
+        "name": "Congo Green Solutions",
+        "address": "16 Mpaka, Pointe-Noire, Republic of Congo",
+        "phone": "068030058",
+        "website": "#",
+        "image": "congo-green.png",
+        "membership": 3,
+        "description": "Environmental business promoting sustainable and green solutions."
+    }
+]
