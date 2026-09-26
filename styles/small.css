@@ -368,3 +368,110 @@ a:focus {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+.hero {
+position: relative;
+margin-bottom: 2rem;
+}
+
+.hero img {
+width: 100%;
+height: auto;
+display: block;
+}
+
+.hero-content {
+padding: 1.5rem;
+text-align: center;
+background-color: #f5f5f5;
+}
+
+.hero-content h1 {
+margin-bottom: 1rem;
+}
+
+.hero-content p {
+margin-bottom: 1.5rem;
+}
+
+/* Join button */
+
+.join-button {
+display: inline-block;
+padding: 0.8rem 1.5rem;
+text-decoration: none;
+font-weight: 700;
+border-radius: 6px;
+}
+
+/* Events */
+
+.events,
+.weather,
+.spotlights {
+margin: 1.5rem 0;
+padding: 1rem;
+}
+
+.event-card {
+padding: 1rem;
+margin-bottom: 1rem;
+border: 1px solid #ccc;
+border-radius: 8px;
+}
+
+/* Weather */
+
+#current-weather {
+padding: 1rem;
+border: 1px solid #ccc;
+border-radius: 8px;
+}
+
+#forecast {
+display: grid;
+gap: 1rem;
+}
+
+.forecast-card {
+padding: 1rem;
+text-align: center;
+border: 1px solid #ccc;
+border-radius: 8px;
+}
+
+/* Spotlights */
+
+#spotlight-container {
+display: grid;
+gap: 1rem;
+}
+
+.spotlight-card {
+padding: 1rem;
+border: 1px solid #ccc;
+border-radius: 8px;
+text-align: center;
+}
+
+.spotlight-card img {
+width: 150px;
+height: 100px;
+object-fit: contain;
+display: block;
+margin: 1rem auto;
+}
+
+.spotlight-card a {
+font-weight: 700;
+}
+
+/* Mobile layout */
+
+main {
+width: 100%;
+}
+
+section h2 {
+margin-bottom: 1rem;
+}

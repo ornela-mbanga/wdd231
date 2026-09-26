@@ -118,7 +118,7 @@ function displayCourses(courseList) {
 }
 
 
-/* ALL */
+
 
 allButton.addEventListener("click", () => {
 
@@ -138,10 +138,7 @@ cseButton.addEventListener("click", () => {
 
     displayCourses(cseCourses);
 
-});
-
-
-/* WDD */
+})
 
 wddButton.addEventListener("click", () => {
 

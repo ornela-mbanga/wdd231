@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"content="Welcome to the Brazzaville Chamber of Commerce. Discover local businesses, events, weather, and opportunities in Brazzaville.">
+    <meta name="author" content="Ornela Mbanga">
+    <meta property="og:title"content="Brazzaville Chamber of Commerce | Home">
+    <meta property="og:description"content="Connect with businesses and opportunities in Brazzaville.">
+    <meta property="og:type" content="website">
+    <meta property="og:image"ontent="https://ornela-mbanga.github.io/wdd231/chamber/images/logo2.png">
+    <meta property="og:url" content="https://ornela-mbanga.github.io/wdd231/chamber/index.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+      <title>Brazzaville Chamber of Commerce | Home</title>
+
+<link rel="icon" href="images/favicon.png">
+
+<link rel="stylesheet" href="styles/small.css">
+<link rel="stylesheet" href="styles/larger.css">
+
+<script src="scripts/home.js" defer></script>
+<script src="scripts/date.js" defer></script>
+
+</head>
+
+<body>
+
+<header>
+
+    <img src="images/logo2.png"
+        alt="Brazzaville Chamber of Commerce logo">
+
+    <button id="menu-button"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false">
+        ☰
+    </button>
+
+    <nav>
+        <a href="index.html"
+            class="active"
+            aria-current="page">
+            Home
+        </a>
+
+        <a href="discover.html">
+            Discover
+        </a>
+
+        <a href="directory.html">
+            Directory
+        </a>
+
+        <a href="join.html">
+            Join
+        </a>
+    </nav>
+
+</header>
+
+<main>
+
+    
+    <section class="hero">
+
+        <img src="images/hero.jpg"
+            alt="Brazzaville city and business area">
+
+        <div class="hero-content">
+
+            <h1>Welcome to the Brazzaville Chamber of Commerce</h1>
+
+            <p>
+                Connecting businesses and creating opportunities
+                for a stronger Brazzaville.
+            </p>
+
+            <a href="join.html" class="join-button">
+                Join the Chamber
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Current Events -->
+    <section class="events">
+
+        <h2>Current Events</h2>
+
+        <article class="event-card">
+
+            <h3>Business Networking Event</h3>
+
+            <p>
+                Meet local entrepreneurs and business owners
+                and build new professional connections.
+            </p>
+
+            <p>
+                <strong>Date:</strong> October 5, 2026
+            </p>
+
+        </article>
+
+        <article class="event-card">
+
+            <h3>Entrepreneurship Workshop</h3>
+
+            <p>
+                Learn practical skills for starting and growing
+                a successful business.
+            </p>
+
+            <p>
+                <strong>Date:</strong> October 12, 2026
+            </p>
+
+        </article>
+
+    </section>
+
+
+    
+    <section class="weather">
+
+        <h2>Weather in Brazzaville</h2>
+
+        <div id="current-weather">
+
+            <p>Loading current weather...</p>
+
+        </div>
+
+        <h3>3-Day Forecast</h3>
+
+        <div id="forecast">
+
+            <p>Loading forecast...</p>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="spotlights">
+
+        <h2>Business Spotlights</h2>
+
+        <div id="spotlight-container">
+
+            <p>Loading business spotlights...</p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        Brazzaville Chamber of Commerce
+    </p>
+
+    <p>
+        Email: info@brazzavillechamber.org
+    </p>
+
+    <p>
+        &copy; <span id="current-year"></span>
+        Brazzaville Chamber of Commerce
+    </p>
+
+    <p>
+        Ornela Mbanga | WDD 231
+    </p>
+
+    <p>
+        Last Modified:
+        <span id="last-modified"></span>
+    </p>
+
+</footer>
+```
+
+</body>
+
+</html>
