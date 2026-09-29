@@ -1,0 +1,172 @@
+:root {
+    --soft-pink: #f4d6dc;
+    --black: #222222;
+    --white: #ffffff;
+    --gold: #c9a227;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    color: var(--black);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--soft-pink);
+    border-bottom: 4px solid var(--gold);
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.header-content h1 {
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    font-size: 3rem;
+    color: var(--black);
+    letter-spacing: 0.15rem;
+}
+
+.header-content p {
+    margin: 0.5rem 0 0;
+    font-size: 1.1rem;
+}
+
+main {
+    width: min(100% - 2rem, 1000px);
+    margin: 2rem auto;
+}
+
+.plan-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: var(--white);
+    border: 1px solid var(--gold);
+    border-radius: 10px;
+}
+
+.plan-section h2 {
+    margin-top: 0;
+    padding-bottom: 0.5rem;
+    font-family: "Playfair Display", serif;
+    color: var(--black);
+    border-bottom: 2px solid var(--gold);
+}
+
+.plan-section h3 {
+    font-family: "Playfair Display", serif;
+}
+
+.plan-section p {
+    max-width: 850px;
+}
+
+li {
+    margin-bottom: 0.75rem;
+}
+
+.color-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.color-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--soft-pink);
+    border-radius: 8px;
+}
+
+.color-box {
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+    border: 2px solid var(--black);
+    border-radius: 5px;
+}
+
+.soft-pink {
+    background-color: #f4d6dc;
+}
+
+.black {
+    background-color: #222222;
+}
+
+.white {
+    background-color: #ffffff;
+}
+
+.gold {
+    background-color: #c9a227;
+}
+
+.color-item h3,
+.color-item p {
+    margin: 0.2rem 0;
+}
+
+.font-example {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: var(--soft-pink);
+    border-left: 5px solid var(--gold);
+}
+
+.playfair-example {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+}
+
+.roboto-example {
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
+}
+
+.wireframe-placeholder {
+    min-height: 180px;
+    margin: 1rem 0 2rem;
+    padding: 2rem;
+    border: 3px dashed var(--black);
+    background-color: var(--white);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.wireframe-placeholder p {
+    margin: 0.3rem auto;
+}
+
+footer {
+    padding: 2rem 1rem;
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+}
+
+footer p {
+    margin: 0.4rem;
+}
+
+@media (min-width: 700px) {
+    .color-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .plan-section {
+        padding: 2rem;
+    }
+
+    .header-content h1 {
+        font-size: 4rem;
+    }
+}
