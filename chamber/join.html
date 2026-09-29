@@ -143,6 +143,7 @@
                         type="radio"
                         name="membership"
                         value="np"
+                        title="Select NP Membership"
                         required>
                     NP Membership - No Fee
                 </label>
@@ -151,7 +152,8 @@
                     <input
                         type="radio"
                         name="membership"
-                        value="bronze">
+                        value="bronze"
+                        title="Select Bronze Membership">
                     Bronze Membership
                 </label>
 
@@ -159,7 +161,8 @@
                     <input
                         type="radio"
                         name="membership"
-                        value="silver">
+                        value="silver"
+                        title="Select Silver Membership">
                     Silver Membership
                 </label>
 
@@ -167,7 +170,8 @@
                     <input
                         type="radio"
                         name="membership"
-                        value="gold">
+                        value="gold"
+                        title="Select Gold Membership">
                     Gold Membership
                 </label>
             </fieldset>
@@ -187,7 +191,8 @@
             <input
                 type="submit"
                 value="Apply for Membership">
-                        </form>
+
+        </form>
 
         <section class="membership-cards">
 
@@ -195,7 +200,10 @@
                 <h2>NP Membership</h2>
                 <p>No fee membership for non-profit organizations.</p>
                 <p>Free</p>
-                <button type="button" onclick="document.getElementById('np-modal').showModal()">
+                <button
+                    type="button"
+                    class="modal-button"
+                    data-modal="np-modal">
                     More Information
                 </button>
             </article>
@@ -204,7 +212,10 @@
                 <h2>Bronze Membership</h2>
                 <p>Basic benefits for small and growing businesses.</p>
                 <p>$100 / year</p>
-                <button type="button" onclick="document.getElementById('bronze-modal').showModal()">
+                <button
+                    type="button"
+                    class="modal-button"
+                    data-modal="bronze-modal">
                     More Information
                 </button>
             </article>
@@ -213,7 +224,10 @@
                 <h2>Silver Membership</h2>
                 <p>Additional training, events, and promotional benefits.</p>
                 <p>$200 / year</p>
-                <button type="button" onclick="document.getElementById('silver-modal').showModal()">
+                <button
+                    type="button"
+                    class="modal-button"
+                    data-modal="silver-modal">
                     More Information
                 </button>
             </article>
@@ -222,7 +236,10 @@
                 <h2>Gold Membership</h2>
                 <p>Premium benefits and greater business visibility.</p>
                 <p>$300 / year</p>
-                <button type="button" onclick="document.getElementById('gold-modal').showModal()">
+                <button
+                    type="button"
+                    class="modal-button"
+                    data-modal="gold-modal">
                     More Information
                 </button>
             </article>
@@ -231,39 +248,55 @@
 
         <dialog id="np-modal">
             <h2>NP Membership Benefits</h2>
-            <p>Benefits include networking opportunities and access to selected Chamber events.</p>
-            <button type="button" onclick="document.getElementById('np-modal').close()">
+            <p>
+                Benefits include networking opportunities and access to
+                selected Chamber events.
+            </p>
+            <button
+                type="button"
+                class="close-modal">
                 Close
             </button>
         </dialog>
 
         <dialog id="bronze-modal">
             <h2>Bronze Membership Benefits</h2>
-            <p>Benefits include networking events, basic training, and business resources.</p>
-            <button type="button" onclick="document.getElementById('bronze-modal').close()">
+            <p>
+                Benefits include networking events, basic training,
+                and business resources.
+            </p>
+            <button
+                type="button"
+                class="close-modal">
                 Close
             </button>
         </dialog>
 
         <dialog id="silver-modal">
             <h2>Silver Membership Benefits</h2>
-            <p>Benefits include training opportunities, networking events, and business promotion.</p>
-            <button type="button" onclick="document.getElementById('silver-modal').close()">
+            <p>
+                Benefits include training opportunities, networking
+                events, and business promotion.
+            </p>
+            <button
+                type="button"
+                class="close-modal">
                 Close
             </button>
         </dialog>
 
         <dialog id="gold-modal">
             <h2>Gold Membership Benefits</h2>
-            <p>Benefits include premium promotion, special events, training, and increased visibility.</p>
-            <button type="button" onclick="document.getElementById('gold-modal').close()">
+            <p>
+                Benefits include premium promotion, special events,
+                training, and increased visibility.
+            </p>
+            <button
+                type="button"
+                class="close-modal">
                 Close
             </button>
         </dialog>
-
-    </main>
-
-        </form>
 
     </main>
 
@@ -294,3 +327,5 @@
     </footer>
 
 </body>
+
+</html>
