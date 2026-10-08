@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -10,6 +11,9 @@ body {
     color: #222;
     line-height: 1.6;
 }
+
+
+
 
 header {
     background-color: #4c687e;
@@ -27,6 +31,7 @@ header img {
 }
 
 #menu-button {
+    display: block;
     background: none;
     border: none;
     color: white;
@@ -40,17 +45,23 @@ nav {
     flex-direction: column;
 }
 
+nav.open {
+    display: flex;
+}
+
 nav a {
     color: white;
     text-decoration: none;
     padding: 0.8rem;
     text-align: center;
+    transition: background-color 0.3s ease;
 }
 
 nav a:hover,
 nav a.active {
     background-color: #00509e;
 }
+
 
 
 main {
@@ -81,11 +92,16 @@ h1 {
     color: white;
     cursor: pointer;
     font-size: 1rem;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
 }
 
 .view-buttons button:hover {
     background-color: #00509e;
+    transform: translateY(-2px);
 }
+
+
 
 #members-container {
     display: grid;
@@ -100,7 +116,6 @@ h1 {
     text-align: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
-
 
 .member-card img {
     width: 100px;
@@ -131,7 +146,6 @@ h1 {
     text-decoration: underline;
 }
 
-
 #members-container.list {
     display: flex;
     flex-direction: column;
@@ -149,9 +163,353 @@ h1 {
 }
 
 
+.page-title {
+    text-align: center;
+    margin: 1.5rem 0;
+    font-size: 2rem;
+}
+
+.visit-message {
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #f1f1f1;
+    border-left: 5px solid #333;
+}
+
+.visit-message p {
+    margin: 0;
+    font-weight: 600;
+}
+
+
+
+.discover-grid {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+        "one"
+        "two"
+        "three"
+        "four"
+        "five"
+        "six"
+        "seven"
+        "eight";
+
+    gap: 1.5rem;
+}
+
+.card-1 {
+    grid-area: one;
+}
+
+.card-2 {
+    grid-area: two;
+}
+
+.card-3 {
+    grid-area: three;
+}
+
+.card-4 {
+    grid-area: four;
+}
+
+.card-5 {
+    grid-area: five;
+}
+
+.card-6 {
+    grid-area: six;
+}
+
+.card-7 {
+    grid-area: seven;
+}
+
+.card-8 {
+    grid-area: eight;
+}
+
+
+
+.discover-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.discover-card h2 {
+    margin-top: 0;
+    font-size: 1.4rem;
+}
+
+.discover-card figure {
+    margin: 0 0 1rem;
+}
+
+.discover-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    transition: none;
+}
+
+.discover-card address {
+    font-style: normal;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+.discover-card p {
+    line-height: 1.6;
+}
+
+.discover-card button {
+    margin-top: 0.5rem;
+    padding: 0.7rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.discover-card button:hover {
+    transform: translateY(-2px);
+}
+
+
+
+
+form {
+    width: 100%;
+    max-width: 650px;
+    margin: 1.5rem auto;
+    padding: 1.2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Stack labels and fields vertically */
+
+form > label {
+    display: block;
+    margin: 0 0 0.35rem;
+    font-weight: 500;
+}
+
+/* Align all form controls */
+
+form > input:not([type="radio"]):not([type="hidden"]):not([type="submit"]),
+form > textarea {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    margin: 0 0 1.2rem;
+    padding: 0.75rem;
+    border: 1px solid #999;
+    border-radius: 5px;
+    background-color: #fff;
+    font: inherit;
+}
+
+form > input:focus,
+form > textarea:focus {
+    outline: 2px solid #00509e;
+    outline-offset: 2px;
+}
+
+form > textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Membership fieldset */
+
+form fieldset {
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+}
+
+form legend {
+    padding: 0 0.4rem;
+    font-weight: 700;
+}
+
+form fieldset label {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0.7rem 0;
+}
+
+form input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+
+
+form input[type="submit"] {
+    display: block;
+    width: 100%;
+    min-height: 48px;
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #003366;
+    color: white;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #00509e;
+    transform: translateY(-2px);
+}
+
+
+.membership-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 2rem auto;
+}
+
+.membership-card {
+    padding: 1.5rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    animation: fadeIn 0.6s ease both;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.membership-card h2 {
+    margin-bottom: 0.8rem;
+    color: #003366;
+}
+
+.membership-card p {
+    margin: 0.6rem 0;
+}
+
+.membership-card button {
+    margin-top: 0.8rem;
+    padding: 0.7rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #003366;
+    color: white;
+    cursor: pointer;
+    font: inherit;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.membership-card button:hover {
+    background-color: #00509e;
+    transform: translateY(-2px);
+}
+
+
+
+dialog {
+    width: min(90%, 500px);
+    margin: auto;
+    padding: 2rem;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+dialog h2 {
+    margin-bottom: 1rem;
+    color: #003366;
+}
+
+dialog p {
+    margin-bottom: 1rem;
+}
+
+dialog button {
+    padding: 0.7rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #003366;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+.spotlight-card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.spotlight-card img {
+    display: block;
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+    margin: 1rem auto;
+}
+
+
+
 footer {
     background-color: #4c687e;
-    color: white;
     color: white;
     text-align: center;
     padding: 1.5rem;
@@ -161,3 +519,19 @@ footer {
 footer p {
     margin: 0.3rem;
 }
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.footer-social a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+

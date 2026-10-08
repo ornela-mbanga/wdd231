@@ -1,33 +1,22 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-        content="Join the Brazzaville Chamber of Commerce. Apply for membership and discover our membership benefits.">
-
+    <meta name="description"content="Join the Brazzaville Chamber of Commerce. Apply for membership and discover our membership benefits.">
     <meta name="author" content="Ornela Divine Mbanga">
-
-    <meta property="og:title"
-        content="Brazzaville Chamber of Commerce | Join">
-
-    <meta property="og:description"
-        content="Apply for membership in the Brazzaville Chamber of Commerce.">
-
+    <meta property="og:title" content="Brazzaville Chamber of Commerce | Join">
+    <meta property="og:description"content="Apply for membership in the Brazzaville Chamber of Commerce.">
     <meta property="og:type" content="website">
-
-    <meta property="og:image"
-        content="https://ornela-mbanga.github.io/wdd231/chamber/images/logo2.png">
-
-    <meta property="og:url"
-        content="https://ornela-mbanga.github.io/wdd231/chamber/join.html">
-
+    <meta property="og:image" content="https://ornela-mbanga.github.io/wdd231/chamber/images/logo2.png">
+    <meta property="og:url"content="https://ornela-mbanga.github.io/wdd231/chamber/join.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
         rel="stylesheet">
 
     <title>Brazzaville Chamber of Commerce | Join</title>
@@ -44,28 +33,24 @@
 <body>
 
     <header>
-
         <img src="images/logo2.png"
             alt="Brazzaville Chamber of Commerce logo">
 
-        <button id="menu-button"
+        <button
+            id="menu-button"
             type="button"
             aria-label="Open navigation menu"
-            aria-expanded="false">
+            aria-expanded="false"
+            aria-controls="navigation">
             ☰
         </button>
 
-        <nav>
+        <nav id="navigation">
             <a href="index.html">Home</a>
             <a href="discover.html">Discover</a>
             <a href="directory.html">Directory</a>
-            <a href="join.html"
-                class="active"
-                aria-current="page">
-                Join
-            </a>
+            <a href="join.html" class="active" aria-current="page">Join</a>
         </nav>
-
     </header>
 
     <main>
@@ -74,127 +59,119 @@
 
         <form method="get" action="thankyou.html">
 
-            <label>
-                First Name
-                <input
-                    type="text"
-                    name="firstName"
-                    title="Enter your first name"
-                    autocomplete="given-name"
-                    required>
-            </label>
+            <label for="firstName">First Name</label>
+            <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                title="Enter your first name"
+                autocomplete="given-name"
+                required>
 
-            <label>
-                Last Name
-                <input
-                    type="text"
-                    name="lastName"
-                    title="Enter your last name"
-                    autocomplete="family-name"
-                    required>
-            </label>
+            <label for="lastName">Last Name</label>
+            <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                title="Enter your last name"
+                autocomplete="family-name"
+                required>
 
-            <label>
-                Organizational Title
-                <input
-                    type="text"
-                    name="organizationTitle"
-                    title="Enter your organizational title"
-                    autocomplete="organization-title"
-                    pattern="[A-Za-zÀ-ÿ -]{7,}">
-            </label>
+            <label for="organizationTitle">Organizational Title</label>
+            <input
+                type="text"
+                id="organizationTitle"
+                name="organizationTitle"
+                title="Enter your organizational title"
+                autocomplete="organization-title"
+                pattern="[A-Za-zÀ-ÿ -]{7,}"
+                >
 
-            <label>
-                Email
-                <input
-                    type="email"
-                    name="email"
-                    title="Enter your email address"
-                    autocomplete="email"
-                    placeholder="example@email.com"
-                    required>
-            </label>
+            <label for="email">Email</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                title="Enter your email address"
+                autocomplete="email"
+                placeholder="example@email.com"
+                required>
 
-            <label>
-                Mobile Phone
-                <input
-                    type="tel"
-                    name="phone"
-                    title="Enter your mobile phone number"
-                    autocomplete="tel"
-                    required>
-            </label>
+            <label for="phone">Mobile Phone</label>
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                title="Enter your mobile phone number"
+                autocomplete="tel"
+                required>
 
-            <label>
-                Organization Name
-                <input
-                    type="text"
-                    name="organization"
-                    title="Enter your organization name"
-                    autocomplete="organization"
-                    required>
-            </label>
+            <label for="organization">Organization Name</label>
+            <input
+                type="text"
+                id="organization"
+                name="organization"
+                title="Enter your organization name"
+                autocomplete="organization"
+                required>
 
             <fieldset>
                 <legend>Membership Level</legend>
 
-                <label>
+                <label for="np">
                     <input
                         type="radio"
+                        id="np"
                         name="membership"
                         value="np"
-                        title="Select NP Membership"
                         required>
                     NP Membership - No Fee
                 </label>
 
-                <label>
+                <label for="bronze">
                     <input
                         type="radio"
+                        id="bronze"
                         name="membership"
-                        value="bronze"
-                        title="Select Bronze Membership">
+                        value="bronze">
                     Bronze Membership
                 </label>
 
-                <label>
+                <label for="silver">
                     <input
                         type="radio"
+                        id="silver"
                         name="membership"
-                        value="silver"
-                        title="Select Silver Membership">
+                        value="silver">
                     Silver Membership
                 </label>
 
-                <label>
+                <label for="gold">
                     <input
                         type="radio"
+                        id="gold"
                         name="membership"
-                        value="gold"
-                        title="Select Gold Membership">
+                        value="gold">
                     Gold Membership
                 </label>
             </fieldset>
 
-            <label>
-                Organization Description
-                <textarea
-                    name="description"
-                    title="Enter a description of your organization"></textarea>
-            </label>
+            <label for="description">Organization Description</label>
+            <textarea
+                id="description"
+                name="description"
+                title="Enter a description of your organization"></textarea>
 
             <input
                 type="hidden"
                 name="timestamp"
                 id="timestamp">
 
-            <input
-                type="submit"
-                value="Apply for Membership">
+            <input type="submit" value="Apply for Membership">
 
         </form>
 
-        <section class="membership-cards">
+        <section class="membership-cards" aria-label="Membership options">
 
             <article class="membership-card">
                 <h2>NP Membership</h2>
@@ -252,11 +229,7 @@
                 Benefits include networking opportunities and access to
                 selected Chamber events.
             </p>
-            <button
-                type="button"
-                class="close-modal">
-                Close
-            </button>
+            <button type="button" class="close-modal">Close</button>
         </dialog>
 
         <dialog id="bronze-modal">
@@ -265,11 +238,7 @@
                 Benefits include networking events, basic training,
                 and business resources.
             </p>
-            <button
-                type="button"
-                class="close-modal">
-                Close
-            </button>
+            <button type="button" class="close-modal">Close</button>
         </dialog>
 
         <dialog id="silver-modal">
@@ -278,11 +247,7 @@
                 Benefits include training opportunities, networking
                 events, and business promotion.
             </p>
-            <button
-                type="button"
-                class="close-modal">
-                Close
-            </button>
+            <button type="button" class="close-modal">Close</button>
         </dialog>
 
         <dialog id="gold-modal">
@@ -291,41 +256,30 @@
                 Benefits include premium promotion, special events,
                 training, and increased visibility.
             </p>
-            <button
-                type="button"
-                class="close-modal">
-                Close
-            </button>
+            <button type="button" class="close-modal">Close</button>
         </dialog>
 
     </main>
 
     <footer>
+        <p>Brazzaville Chamber of Commerce</p>
 
-        <p>
-            Brazzaville Chamber of Commerce
-        </p>
-
-        <p>
-            Email: info@brazzavillechamber.org
-        </p>
+        <p>Email: info@brazzavillechamber.org</p>
 
         <p>
             &copy; <span id="current-year"></span>
             Brazzaville Chamber of Commerce
         </p>
 
-        <p>
-            Ornela Divine Mbanga | WDD 231
-        </p>
+        <p>Ornela Divine Mbanga | WDD 231</p>
 
         <p>
             Last Modified:
             <span id="last-modified"></span>
         </p>
-
     </footer>
 
 </body>
 
 </html>
+
