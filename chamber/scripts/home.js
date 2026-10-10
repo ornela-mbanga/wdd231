@@ -1,10 +1,6 @@
 const latitude = -4.2634;
 const longitude = 15.2429;
 
-// ==========================================
-// WEATHER
-// ==========================================
-
 async function getWeather() {
     const url =
         `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}` +
@@ -100,10 +96,6 @@ async function getWeather() {
 }
 
 
-// ==========================================
-// WEATHER DESCRIPTION
-// ==========================================
-
 function getWeatherDescription(code) {
     if (code === 0) return "☀️ Clear sky";
     if (code === 1 || code === 2) return "🌤️ Partly cloudy";
@@ -118,9 +110,6 @@ function getWeatherDescription(code) {
 }
 
 
-// ==========================================
-// COMPANY SPOTLIGHTS
-// ==========================================
 
 async function getSpotlights() {
     try {
@@ -214,9 +203,6 @@ async function getSpotlights() {
 }
 
 
-// ==========================================
-// START FUNCTIONS
-// ==========================================
 
 getWeather();
 getSpotlights();
