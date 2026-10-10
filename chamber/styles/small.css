@@ -1,4 +1,7 @@
 
+/* =========================
+   GENERAL STYLES
+   ========================= */
 
 * {
     box-sizing: border-box;
@@ -13,6 +16,17 @@ body {
     line-height: 1.6;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #003366;
+    margin: 1.5rem 0;
+}
+
 /* =========================
    HEADER
    ========================= */
@@ -25,6 +39,7 @@ header {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 header img {
@@ -34,6 +49,7 @@ header img {
 
 .site-title {
     flex: 1;
+    min-width: 0;
     margin-left: 0.8rem;
 }
 
@@ -48,9 +64,11 @@ header img {
     font-size: 0.95rem;
 }
 
-/* Mobile menu button */
+/* =========================
+   MOBILE MENU BUTTON
+   ========================= */
 
-#menu {
+#menu-button {
     display: block;
     background: none;
     border: none;
@@ -60,14 +78,14 @@ header img {
     padding: 0.3rem;
 }
 
+#menu-button:hover,
+#menu-button:focus-visible {
+    color: #f2c14e;
+}
 
-#menu-button {
-    display: block;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
+#menu-button:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 4px;
 }
 
 /* =========================
@@ -111,12 +129,6 @@ main {
     margin: 0 auto;
     padding: 1rem;
     min-width: 0;
-}
-
-h1 {
-    text-align: center;
-    color: #003366;
-    margin: 1.5rem 0;
 }
 
 .page-title {
@@ -262,7 +274,7 @@ h1 {
     gap: 1.5rem;
 }
 
-/* Grid areas for the eight cards */
+/* DISCOVER GRID AREAS */
 
 .card-1 {
     grid-area: one;
@@ -315,7 +327,7 @@ h1 {
     padding: 0.8rem;
     font-size: 1.25rem;
     text-align: center;
-    color: #ffffff;
+    color: #fff;
     background-color: #4c687e;
     overflow-wrap: anywhere;
 }
@@ -412,7 +424,7 @@ form > textarea {
     resize: vertical;
 }
 
-/* Membership fieldset */
+/* MEMBERSHIP FIELDSET */
 
 form fieldset {
     margin: 1rem 0;
@@ -634,7 +646,6 @@ footer p {
     text-decoration: underline;
 }
 
-/* Remove unwanted underlining from footer text */
 footer h2,
 footer p,
 footer .footer-contact,

@@ -1,107 +1,137 @@
-const membersContainer = document.querySelector("#members-container");
-const gridButton = document.querySelector("#grid-button");
-const listButton = document.querySelector("#list-button");
 
-async function loadMembers() {
-    try {
-        const response = await fetch("data/members.json");
+const menuButton = document.querySelector("#menu-button");
+const navigation = document.querySelector("#navigation");
 
-        if (!response.ok) {
-            throw new Error("Could not load members.json");
-        }
+if (menuButton && navigation) {
+    menuButton.addEventListener("click", () => {
+        const isOpen = navigation.classList.toggle("open");
 
-        const members = await response.json();
+        menuButton.setAttribute("aria-expanded", String(isOpen));
+        menuButton.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation menu" : "Open navigation menu"
+        );
 
-        displayMembers(members);
-
-    } catch (error) {
-        console.error(error);
-
-        membersContainer.innerHTML =
-            "<p>Sorry, the business directory could not be loaded.</p>";
-    }
-}
-
-
-function displayMembers(members) {
-
-    membersContainer.innerHTML = "";
-
-    members.forEach((member) => {
-
-        const card = document.createElement("article");
-
-        card.className = "member-card";
-
-        card.innerHTML = `
-            <div class="member-logo">
-                <img src="images/${member.image}" alt="${member.name} logo">
-            </div>
-
-            <div class="member-info">
-
-                <h2>${member.name}</h2>
-
-                <p>${member.description}</p>
-
-                <p>
-                    <strong>Address:</strong>
-                    ${member.address}
-                </p>
-
-                <p>
-                    <strong>Phone:</strong>
-                    ${member.phone}
-                </p>
-
-                <p>
-                    <strong>Membership:</strong>
-                    ${getMembershipLevel(member.membership)}
-                </p>
-
-                <p>
-                    <a href="${member.website}" target="_blank" rel="noopener">
-                        Visit Website
-                    </a>
-                </p>
-
-            </div>
-        `;
-
-        membersContainer.appendChild(card);
+        menuButton.textContent = isOpen ? "✕" : "☰";
     });
 }
 
+/* =========================
+   DISCOVER PAGE
+   ========================= */
 
-function getMembershipLevel(level) {
+const discoverGrid = document.querySelector("#discover-grid");
+const visitText = document.querySelector("#visit-text");
 
-    if (level === 3) {
-        return "Gold";
+/* =========================
+   VISIT MESSAGE
+   ========================= */
+
+function displayVisitMessage() {
+    if (!visitText) return;
+
+    const now = Date.now();
+    const lastVisit = Number(localStorage.getItem("lastVisit"));
+
+    if (!lastVisit) {
+        visitText.textContent =
+            "Welcome! Let us know if you have any questions about Brazzaville.";
+    } else {
+        const daysSinceVisit = Math.floor(
+            (now - lastVisit) / (1000 * 60 * 60 * 24)
+        );
+
+        if (daysSinceVisit < 1) {
+            visitText.textContent = "Back so soon! Awesome!";
+        } else if (daysSinceVisit === 1) {
+            visitText.textContent = "You last visited 1 day ago.";
+        } else {
+            visitText.textContent =
+                `You last visited ${daysSinceVisit} days ago.`;
+        }
     }
 
-    if (level === 2) {
-        return "Silver";
-    }
-
-    return "Member";
+    localStorage.setItem("lastVisit", String(now));
 }
 
+/* =========================
+   LOAD DISCOVER PLACES
+   ========================= */
 
-gridButton.addEventListener("click", () => {
+async function loadPlaces() {
+    if (!discoverGrid) return;
 
-    membersContainer.classList.remove("list");
-    membersContainer.classList.add("grid");
+    try {
+        const response = await fetch("data/places.json");
 
-});
+        if (!response.ok) {
+            throw new Error("Could not load places.json");
+        }
 
+        const places = await response.json();
 
+        displayPlaces(places);
+    } catch (error) {
+        console.error("Error loading discover places:", error);
 
-listButton.addEventListener("click", () => {
+        discoverGrid.innerHTML =
+            "<p>Sorry, the places could not be loaded. Please try again later.</p>";
+    }
+}
 
-    membersContainer.classList.remove("grid");
-    membersContainer.classList.add("list");
+/* =========================
+   DISPLAY DISCOVER CARDS
+   ========================= */
 
-});
+function displayPlaces(places) {
+    if (!discoverGrid) return;
 
+    discoverGrid.innerHTML = "";
 
-loadMembers();
+    places.forEach((place, index) => {
+        const card = document.createElement("article");
+
+        card.className = `discover-card card-${index + 1}`;
+
+        const title = document.createElement("h2");
+        title.textContent = place.name;
+
+        const figure = document.createElement("figure");
+        const image = document.createElement("img");
+
+        image.src = `images/${place.image}`;
+        image.alt = place.name;
+        image.loading = "lazy";
+        image.width = 300;
+        image.height = 200;
+
+        figure.appendChild(image);
+
+        const address = document.createElement("address");
+        address.textContent = place.address;
+
+        const description = document.createElement("p");
+        description.textContent = place.description;
+
+        const button = document.createElement("button");
+        button.type = "button";
+        button.textContent = "Learn More";
+
+        button.addEventListener("click", () => {
+            alert(`${place.name}\n\n${place.description}`);
+        });
+
+        card.append(
+            title,
+            figure,
+            address,
+            description,
+            button
+        );
+
+        discoverGrid.appendChild(card);
+    });
+}
+
+displayVisitMessage();
+loadPlaces();

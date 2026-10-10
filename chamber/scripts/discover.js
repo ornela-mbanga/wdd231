@@ -1,37 +1,56 @@
+
 import { discoverPlaces } from "../data/discover.mjs";
+
+// -------------------------
+// DISCOVER PLACES
+// -------------------------
 
 const discoverGrid = document.querySelector("#discover-grid");
 
-// Create the cards
 function displayPlaces(places) {
+    if (!discoverGrid) {
+        console.error("The discover-grid element was not found.");
+        return;
+    }
+
     discoverGrid.innerHTML = "";
 
     places.forEach((place, index) => {
         const card = document.createElement("article");
+        card.classList.add("discover-card", `card-${index + 1}`);
 
-        card.classList.add("discover-card");
-        card.classList.add(`card-${index + 1}`);
+        const title = document.createElement("h2");
+        title.textContent = place.name;
 
-        card.innerHTML = `
-            <h2>${place.name}</h2>
+        const figure = document.createElement("figure");
+        const image = document.createElement("img");
 
-            <figure>
-                <img 
-                    src="${place.image}" 
-                    alt="${place.name}"
-                    width="300"
-                    height="200"
-                    loading="lazy"
-                >
-            </figure>
+        image.src = place.image;
+        image.alt = place.name;
+        image.width = 300;
+        image.height = 200;
+        image.loading = "lazy";
 
-            <address>${place.address}</address>
+        figure.appendChild(image);
 
-            <p>${place.description}</p>
+        const address = document.createElement("address");
+        address.textContent = place.address;
 
-            <button type="button">Learn More</button>
-        `;
+        const description = document.createElement("p");
+        description.textContent = place.description;
 
+        const button = document.createElement("button");
+        button.type = "button";
+        button.textContent = "Learn More";
+
+        // Learn More button action
+        button.addEventListener("click", () => {
+            alert(
+                `${place.name}\n\nAddress: ${place.address}\n\n${place.description}`
+            );
+        });
+
+        card.append(title, figure, address, description, button);
         discoverGrid.appendChild(card);
     });
 }
@@ -45,60 +64,56 @@ displayPlaces(discoverPlaces);
 
 const visitText = document.querySelector("#visit-text");
 
-const currentTime = Date.now();
-const lastVisit = localStorage.getItem("lastVisit");
-
-if (!lastVisit) {
-
-    visitText.textContent =
-        "Welcome! Let us know if you have any questions.";
-
-} else {
-
-    const timeDifference = currentTime - Number(lastVisit);
-
+if (visitText) {
+    const currentTime = Date.now();
+    const lastVisit = localStorage.getItem("lastVisit");
     const millisecondsPerDay = 1000 * 60 * 60 * 24;
 
-    const daysBetween = Math.floor(
-        timeDifference / millisecondsPerDay
-    );
-
-    if (timeDifference < millisecondsPerDay) {
-
+    if (!lastVisit) {
         visitText.textContent =
-            "Back so soon! Awesome!";
-
-    } else if (daysBetween === 1) {
-
-        visitText.textContent =
-            "You last visited 1 day ago.";
-
+            "Welcome! Let us know if you have any questions.";
     } else {
+        const timeDifference = currentTime - Number(lastVisit);
+        const daysBetween = Math.floor(
+            timeDifference / millisecondsPerDay
+        );
 
-        visitText.textContent =
-            `You last visited ${daysBetween} days ago.`;
+        if (daysBetween < 1) {
+            visitText.textContent = "Back so soon! Awesome!";
+        } else if (daysBetween === 1) {
+            visitText.textContent = "You last visited 1 day ago.";
+        } else {
+            visitText.textContent =
+                `You last visited ${daysBetween} days ago.`;
+        }
     }
-}
 
-// Save current visit
-localStorage.setItem("lastVisit", currentTime);
+    localStorage.setItem("lastVisit", String(currentTime));
+}
 
 
 // -------------------------
 // MOBILE NAVIGATION
 // -------------------------
 
-const menuButton = document.querySelector("#menu");
+const menuButton = document.querySelector("#menu-button");
 const navigation = document.querySelector("#navigation");
 
-menuButton.addEventListener("click", () => {
-    navigation.classList.toggle("open");
+if (menuButton && navigation) {
+    menuButton.addEventListener("click", () => {
+        const isOpen = navigation.classList.toggle("open");
 
-    if (navigation.classList.contains("open")) {
-        menuButton.textContent = "✕";
-        menuButton.setAttribute("aria-label", "Close navigation menu");
-    } else {
-        menuButton.textContent = "☰";
-        menuButton.setAttribute("aria-label", "Open navigation menu");
-    }
-});
+        menuButton.textContent = isOpen ? "✕" : "☰";
+        menuButton.setAttribute("aria-expanded", String(isOpen));
+        menuButton.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation menu" : "Open navigation menu"
+        );
+    });
+} else {
+    console.error(
+        "Menu button or navigation not found. Check discover.html IDs."
+    );
+}
+
+
