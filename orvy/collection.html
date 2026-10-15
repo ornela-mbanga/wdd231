@@ -1,0 +1,330 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Explore the ORVY collection of beauty, skincare, haircare, fashion and lifestyle products.">
+    <meta name="author" content="Ornela Divine Mbanga">
+    <meta name="theme-color" content="#F4D6DC">
+
+    <meta property="og:title" content="Collections | ORVY">
+    <meta property="og:description" content="Discover the ORVY beauty, fashion and lifestyle collection.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/orvy-logo.png">
+
+    <title>Collections | ORVY</title>
+
+    <link rel="icon" href="images/orvy-logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <script src="scripts/main.js" type="module"></script>
+    <script src="scripts/products.js" type="module"></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="logo" href="index.html" aria-label="ORVY home">
+            <img src="images/orvy-logo.png" alt="ORVY brand logo">
+        </a>
+
+        <button
+            class="menu-toggle"
+            id="menu-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="primary-navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="navigation" id="primary-navigation" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="collection.html" aria-current="page">Collections</a>
+            <a href="index.html#our-story">Our Story</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">THE ORVY EXPERIENCE</p>
+                <h1>Discover Our Collections</h1>
+                <p>
+                    Explore the ORVY collection and find the products
+                    that express your beauty, personality and style.
+                </p>
+                <a class="button" href="#our-products">Explore Products</a>
+            </div>
+
+            <div class="hero-image">
+                <img
+                    src="images/produit1.jpg"
+                    alt="Featured ORVY product"
+                    width="600"
+                    height="500">
+            </div>
+        </section>
+
+        <section class="section-container" id="our-products">
+            <p class="eyebrow">MADE FOR YOUR STYLE</p>
+            <h2>Our Products</h2>
+            <p>
+                Browse our six featured products. Product photos, names,
+                prices and descriptions can be customized below.
+            </p>
+
+            <div class="catalog-controls">
+                <div class="form-field">
+                    <label for="product-search">Search products</label>
+                    <input
+                        type="search"
+                        id="product-search"
+                        placeholder="Enter a product name">
+                </div>
+
+                <div class="form-field">
+                    <label for="category-filter">Filter by category</label>
+                    <select id="category-filter">
+                        <option value="all">All categories</option>
+                        <option value="beauty">Beauty &amp; Skincare</option>
+                        <option value="haircare">Haircare</option>
+                        <option value="fashion">Fashion</option>
+                        <option value="accessories">Accessories</option>
+                        <option value="fragrance">Fragrance</option>
+                        <option value="lifestyle">Lifestyle</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="sort-products">Sort products</label>
+                    <select id="sort-products">
+                        <option value="default">Default order</option>
+                        <option value="name">Name: A to Z</option>
+                        <option value="price-low">Price: low to high</option>
+                        <option value="price-high">Price: high to low</option>
+                    </select>
+                </div>
+            </div>
+
+            <p id="product-count" aria-live="polite">6 products</p>
+            <p id="empty-message" hidden>No products match your search.</p>
+
+            <div class="product-grid" id="product-grid">
+
+                <!-- PRODUCT 1: Replace the image, name, price and description. -->
+                <article class="product-card"
+                    data-id="1"
+                    data-name="Product 1"
+                    data-category="beauty"
+                    data-price="">
+                    <img src="images/produit1.jpg"
+                        alt="ORVY product 1"
+                        width="600" height="500" loading="lazy">
+
+                    <div class="product-card-content">
+                        <p class="eyebrow">BEAUTY</p>
+                        <h3>Product 1</h3>
+                        <p class="product-price">Price: Add your price (XAF)</p>
+                        <p class="product-description">Add your product description here.</p>
+
+                        <button class="button product-details"
+                            type="button" data-product="1">
+                            View Details
+                        </button>
+
+                        <button class="button favorite-button"
+                            type="button" data-favorite="1"
+                            aria-pressed="false">
+                            ♡ Add to Favorites
+                        </button>
+                    </div>
+                </article>
+
+                <!-- PRODUCT 2 -->
+                <article class="product-card"
+                    data-id="2"
+                    data-name="Product 2"
+                    data-category="beauty"
+                    data-price="">
+                    <img src="images/produit2.jpg"
+                        alt="ORVY product 2"
+                        width="600" height="500" loading="lazy">
+
+                    <div class="product-card-content">
+                        <p class="eyebrow">BEAUTY</p>
+                        <h3>Product 2</h3>
+                        <p class="product-price">Price: Add your price (XAF)</p>
+                        <p class="product-description">Add your product description here.</p>
+
+                        <button class="button product-details"
+                            type="button" data-product="2">
+                            View Details
+                        </button>
+
+                        <button class="button favorite-button"
+                            type="button" data-favorite="2"
+                            aria-pressed="false">
+                            ♡ Add to Favorites
+                        </button>
+                    </div>
+                </article>
+
+                <!-- PRODUCT 3 -->
+                <article class="product-card"
+                    data-id="3"
+                    data-name="Product 3"
+                    data-category="haircare"
+                    data-price="">
+                    <img src="images/produit3.jpg"
+                        alt="ORVY product 3"
+                        width="600" height="500" loading="lazy">
+
+                    <div class="product-card-content">
+                        <p class="eyebrow">HAIRCARE</p>
+                        <h3>Product 3</h3>
+                        <p class="product-price">Price: Add your price (XAF)</p>
+                        <p class="product-description">Add your product description here.</p>
+
+                        <button class="button product-details"
+                            type="button" data-product="3">
+                            View Details
+                        </button>
+
+                        <button class="button favorite-button"
+                            type="button" data-favorite="3"
+                            aria-pressed="false">
+                            ♡ Add to Favorites
+                        </button>
+                    </div>
+                </article>
+
+                <!-- PRODUCT 4 -->
+                <article class="product-card"
+                    data-id="4"
+                    data-name="Product 4"
+                    data-category="fashion"
+                    data-price="">
+                    <img src="images/produit4.jpg"
+                        alt="ORVY product 4"
+                        width="600" height="500" loading="lazy">
+
+                    <div class="product-card-content">
+                        <p class="eyebrow">FASHION</p>
+                        <h3>Product 4</h3>
+                        <p class="product-price">Price: Add your price (XAF)</p>
+                        <p class="product-description">Add your product description here.</p>
+
+                        <button class="button product-details"
+                            type="button" data-product="4">
+                            View Details
+                        </button>
+
+                        <button class="button favorite-button"
+                            type="button" data-favorite="4"
+                            aria-pressed="false">
+                            ♡ Add to Favorites
+                        </button>
+                    </div>
+                </article>
+
+                <!-- PRODUCT 5 -->
+                <article class="product-card"
+                    data-id="5"
+                    data-name="Product 5"
+                    data-category="accessories"
+                    data-price="">
+                    <img src="images/produit5.jpg"
+                        alt="ORVY product 5"
+                        width="600" height="500" loading="lazy">
+
+                    <div class="product-card-content">
+                        <p class="eyebrow">ACCESSORIES</p>
+                        <h3>Product 5</h3>
+                        <p class="product-price">Price: Add your price (XAF)</p>
+                        <p class="product-description">Add your product description here.</p>
+
+                        <button class="button product-details"
+                            type="button" data-product="5">
+                            View Details
+                        </button>
+
+                        <button class="button favorite-button"
+                            type="button" data-favorite="5"
+                            aria-pressed="false">
+                            ♡ Add to Favorites
+                        </button>
+                    </div>
+                </article>
+
+                <!-- PRODUCT 6 -->
+                <article class="product-card"
+                    data-id="6"
+                    data-name="Product 6"
+                    data-category="lifestyle"
+                    data-price="">
+                    <img src="images/produit6.jpg"
+                        alt="ORVY product 6"
+                        width="600" height="500" loading="lazy">
+
+                    <div class="product-card-content">
+                        <p class="eyebrow">LIFESTYLE</p>
+                        <h3>Product 6</h3>
+                        <p class="product-price">Price: Add your price (XAF)</p>
+                        <p class="product-description">Add your product description here.</p>
+
+                        <button class="button product-details"
+                            type="button" data-product="6">
+                            View Details
+                        </button>
+
+                        <button class="button favorite-button"
+                            type="button" data-favorite="6"
+                            aria-pressed="false">
+                            ♡ Add to Favorites
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <dialog id="product-modal" aria-labelledby="modal-title">
+            <div id="modal-content"></div>
+            <button class="button" id="modal-close" type="button">
+                Close
+            </button>
+        </dialog>
+    </main>
+
+   <footer class="site-footer">
+    <a href="index.html" aria-label="ORVY home">
+        <img src="images/orvy-logo.png" alt="ORVY logo"
+            width="80" height="60">
+    </a>
+
+    <p>Beauty, fashion and lifestyle inspired by sisterhood.</p>
+
+    <nav aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="collection.html">Collections</a>
+        <a href="contact.html">Contact</a>
+        <a href="attributions.html">Attributions</a>
+    </nav>
+
+    <p>
+        &copy; <span id="current-year"></span> ORVY.
+        All rights reserved.
+    </p>
+</footer>
+</body>
+</html>

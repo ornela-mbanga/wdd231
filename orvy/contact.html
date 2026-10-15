@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact ORVY for questions about our beauty, fashion and lifestyle brand.">
+    <meta name="author" content="Ornela Divine Mbanga">
+    <meta name="theme-color" content="#F4D6DC">
+    <title>Contact | ORVY</title>
+    <link rel="icon" href="images/orvy-logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script src="scripts/main.js" type="module"></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="logo" href="index.html" aria-label="ORVY home">
+            <img src="images/orvy-logo.png" alt="ORVY brand logo">
+        </a>
+
+        <button class="menu-toggle" id="menu-toggle" type="button"
+            aria-label="Open navigation menu" aria-expanded="false"
+            aria-controls="primary-navigation">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav class="navigation" id="primary-navigation" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="collection.html">Collections</a>
+            <a href="index.html#our-story">Our Story</a>
+            <a href="contact.html" aria-current="page">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">WE WOULD LOVE TO HEAR FROM YOU</p>
+                <h1>Contact ORVY</h1>
+                <p>
+                    Do you have a question about our brand or products?
+                    Send us a message using the form below.
+                </p>
+            </div>
+        </section>
+
+        <section class="section-container">
+            <h2>Send Us a Message</h2>
+            <p>Fields marked with * are required.</p>
+
+            <form action="form-action.html" method="get" id="contact-form">
+                <div class="form-field">
+                    <label for="firstName">First name *</label>
+                    <input type="text" id="firstName" name="firstName"
+                        autocomplete="given-name" required maxlength="60">
+                </div>
+
+                <div class="form-field">
+                    <label for="lastName">Last name *</label>
+                    <input type="text" id="lastName" name="lastName"
+                        autocomplete="family-name" required maxlength="60">
+                </div>
+
+                <div class="form-field">
+                    <label for="email">Email address *</label>
+                    <input type="email" id="email" name="email"
+                        autocomplete="email" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="subject">Subject *</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Select a subject</option>
+                        <option value="product">Product question</option>
+                        <option value="beauty">Beauty and skincare</option>
+                        <option value="partnership">Partnership</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="message">Your message *</label>
+                    <textarea id="message" name="message" rows="6"
+                        required minlength="10" maxlength="1000"></textarea>
+                </div>
+
+                <button class="button" type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <img src="images/orvy-logo.png" alt="ORVY logo" width="80" height="60">
+        <p>Beauty, fashion and lifestyle inspired by sisterhood.</p>
+        <nav aria-label="Footer navigation">
+            <a href="index.html">Home</a>
+            <a href="collection.html">Collections</a>
+            <a href="contact.html">Contact</a>
+            <a href="attributions.html">Attributions</a>
+        </nav>
+        <p>&copy; <span id="current-year"></span> ORVY — WDD231 Individual Website Project</p>
+        <p>Project author: Ornela Divine Mbanga</p>
+        <p id="last-modified"></p>
+    </footer>
+</body>
+</html>

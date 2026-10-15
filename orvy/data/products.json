@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "name": "Complete Beauty Set",
+        "category": "beauty",
+        "price": 15000,
+        "image": "images/produit1.jpg",
+        "description": "Discover your beauty with this complete beauty set. A collection of beauty essentials designed to enhance your natural glow and make your daily beauty routine special."
+    },
+    {
+        "id": 2,
+        "name": "Makeup Palette",
+        "category": "beauty",
+        "price": 15000,
+        "image": "images/produit2.jpg",
+        "description": "Express your creativity with this versatile makeup palette. Perfect for creating beautiful looks for everyday wear or special occasions."
+    },
+    {
+        "id": 3,
+        "name": "Lipstick",
+        "category": "beauty",
+        "price": 10000,
+        "image": "images/produit3.jpg",
+        "description": "Add a touch of elegance to your look with this beautiful lipstick. Perfect for enhancing your lips and completing your makeup routine."
+    },
+    {
+        "id": 4,
+        "name": "Lipstick Fashion Look",
+        "category": "fashion",
+        "price": 50000,
+        "image": "images/produit4.jpg",
+        "description": "Discover a stylish beauty and fashion look featuring two people dressed elegantly. Get inspired to express your confidence, beauty, and personal style."
+    },
+    {
+        "id": 5,
+        "name": "Mini Lipstick Set",
+        "category": "beauty",
+        "price": 25000,
+        "image": "images/produit5.jpg",
+        "description": "Carry your beauty essentials wherever you go with this mini lipstick set. Compact and stylish, it is perfect for touch-ups throughout the day."
+    },
+    {
+        "id": 6,
+        "name": "Complete Makeup Collection",
+        "category": "beauty",
+        "price": 15000,
+        "image": "images/produit6.jpg",
+        "description": "Explore a complete collection of beauty products designed to complement your makeup routine and inspire creativity and confidence."
+    },
+    {
+        "id": 7,
+        "name": "Radiant Face Cream",
+        "category": "beauty",
+        "price": 12000,
+        "image": "images/produit7.jpg",
+        "description": "A face cream designed to complement your daily skincare routine and leave your skin feeling soft and refreshed."
+    },
+    {
+        "id": 8,
+        "name": "Velvet Lipstick",
+        "category": "beauty",
+        "price": 8000,
+        "image": "images/produit8.jpg",
+        "description": "A stylish lipstick that adds a beautiful touch of color to your makeup look for everyday wear or special occasions."
+    },
+    {
+        "id": 9,
+        "name": "Glow Body Lotion",
+        "category": "beauty",
+        "price": 10000,
+        "image": "images/produit9.jpg",
+        "description": "A body lotion for your self-care routine, helping your skin feel smooth and moisturized."
+    },
+    {
+        "id": 10,
+        "name": "Silky Hair Oil",
+        "category": "haircare",
+        "price": 9000,
+        "image": "images/produit10.jpg",
+        "description": "A haircare essential to incorporate into your routine for added shine and a smooth, well-groomed finish."
+    },
+    {
+        "id": 11,
+        "name": "Nourishing Hair Mask",
+        "category": "haircare",
+        "price": 12000,
+        "image": "images/produit11.jpg",
+        "description": "A hair mask designed to complement your haircare routine and help leave hair feeling softer and easier to manage."
+    },
+    {
+        "id": 12,
+        "name": "Elegant Handbag",
+        "category": "fashion",
+        "price": 35000,
+        "image": "images/produit12.jpg",
+        "description": "An elegant handbag that combines everyday practicality with refined style, perfect for completing a variety of outfits."
+    },
+    {
+        "id": 13,
+        "name": "Chic Sandals",
+        "category": "fashion",
+        "price": 20000,
+        "image": "images/produit13.jpg",
+        "description": "Stylish sandals designed to complement casual and elegant outfits for everyday activities and outings."
+    },
+    {
+        "id": 14,
+        "name": "Golden Earrings",
+        "category": "accessories",
+        "price": 10000,
+        "image": "images/produit14.jpg",
+        "description": "Elegant earrings that add a sophisticated finishing touch to your look, whether you are dressing up or keeping it simple."
+    },
+    {
+        "id": 15,
+        "name": "Signature Perfume",
+        "category": "lifestyle",
+        "price": 25000,
+        "image": "images/produit15.jpg",
+        "description": "A fragrance that complements your personal style and adds a memorable finishing touch to your everyday routine."
+    }
+]
