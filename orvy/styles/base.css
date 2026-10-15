@@ -190,7 +190,7 @@ textarea:focus-visible {
 
 .navigation a:hover,
 .navigation a[aria-current="page"] {
-    color: #80600B;
+    color: #6B4E08;
     text-decoration: underline;
     text-decoration-color: var(--orvy-gold);
     text-underline-offset: 6px;
